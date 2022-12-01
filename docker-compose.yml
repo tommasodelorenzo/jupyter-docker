@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  jupyter:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: juppy
+    user: root
+    environment:
+      - GRANT_SUDO=yes
+    ports:
+      - "8888:8888"
+    working_dir: /home/jovyan/work/
+    volumes:
+      - ./work/:/home/jovyan/work/
+    command: "start-notebook.sh --NotebookApp.token='' --NotebookApp.password='' --allow-root"
