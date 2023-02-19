@@ -1,9 +1,4 @@
-sentence-transformers
 pandas==1.5.2
 spacy==3.4.3
 scikit-learn==1.1.3
-gensim
-fasttext
-
-spacy
-wandb
+wandb==0.13.10
